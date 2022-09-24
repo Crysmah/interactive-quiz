@@ -12,5 +12,8 @@ body{
 }
 .quiz-container{
     background-color: #fff;
-    
+    width: 550px;
+    height: 300px;
+    border: solid;
+    text-indent: 1%;
 }
