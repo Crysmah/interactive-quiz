@@ -7,6 +7,7 @@ body{
 }
 h2{
     font-size: 1.4rem;
+    text-align: center;
 }
 .quiz-container{
     background-color: #fff;
@@ -44,11 +45,16 @@ button:hover{
 }
 
 .roles {
-    background-color: #fff;
-    width: 550px;
-    height: 300px;
+    background-color: rgb(255, 255, 255);
+    width: 720px;
+    height: 840px;
     border-radius: 10px;
-    
     text-indent: 1%;
     margin: 0% auto;
+}
+
+.roleText {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0%;
+    text-align: center;
 }
