@@ -9,6 +9,3 @@ The website has the user answer questions. It then analyzes their answers to pro
 
 Website
 https://scrum-group-5.github.io./
-
-Files
-index.html
