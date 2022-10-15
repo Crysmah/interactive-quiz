@@ -1,8 +1,14 @@
-# interactive-quiz
+_# interactive-quiz
 Scrum Group #5
 Group Members: Adrian Charbonneau (QA), Javier Diaz (Tech Lead), Johnny Quach (Tech Chaser), Raul Jarquin (Scrum Master), Simon Kaley (Product Owner), Betty Vaquero (Tech Chaser)
 
-Avaliable Languages : HMTL, JavaScript, CSS, ... 
-C++ (is avaliable for use but might be harder than using another language)
+Languages Used: HMTL, JavaScript, CSS
+Github's Free Hosting.
 
-Github also has free website hosting.
+The website has the user answer questions. It then analyzes their answers to produce their scrum role they are best suited to perform.
+
+Website
+https://scrum-group-5.github.io./
+
+Files
+index.html
