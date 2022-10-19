@@ -224,32 +224,35 @@ submitBtn.addEventListener('click', () =>{
        
        } 
        else if (quizData[currentQuiz].answer === "ScrumMaster"){
-        points[1] = answer
+        points[1] += parseInt(answer)
         }
         else if(quizData[currentQuiz].answer === "QA"){
             points[2] += parseInt(answer)
             
         }
         else if(quizData[currentQuiz].answer === "TechLead"){
-            points[3] = answer
+            points[3] += parseInt(answer)
         }
         else if(quizData[currentQuiz].answer === "TechChaser"){
-            points[4] = answer
+            points[4] += parseInt(answer)
         }
        currentQuiz++
     
     if(currentQuiz < quizData.length){
         loadQuiz()
     } else{
-        console.log(points[0])
-        console.log(points[1])
-        console.log(points[2])
-        console.log(points[3])
+       
         for(i = 1; i < 5; i++) {// Single Highest Role
             if(points[i] > points[highestIndex]){ // comparing indexes to find highest value index 
                 highestIndex = i;
              }
         }
+        console.log(points[0])
+        console.log(points[1])
+        console.log(points[2])
+        console.log(points[3])
+        console.log(points[4])
+        
         quiz.innerHTML= "Result: Your best suited role(s) is " + roles[highestIndex] 
         for(i=0; i < 5; i++){
             if(points[i] == points[highestIndex] && highestIndex !=i){
