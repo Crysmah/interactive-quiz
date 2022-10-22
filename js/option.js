@@ -1,7 +1,7 @@
 
   const quizData = [
     {
-        question: "You have an eye for spotting errors in a project that others have missed",
+        question: "You have an eye for spotting errors in a project that others have missed.",
         a:  "Strongly Agree",
         b:  "Agree",
         c:  "Neutral",
@@ -10,7 +10,7 @@
         answer: "QA",
     },
     {
-        question: "People often come to you to confirm details about what the project should be",
+        question: "People often come to you to confirm details about what the project should be.",
         a:  "Strongly Agree",
         b:  "Agree",
         c:  "Neutral",
@@ -20,7 +20,7 @@
         
     },
     {
-        question:  "You are not afraid to voice your opnion and concerns",
+        question:  "You are not afraid to voice your opnion and concerns.",
         a:  "Strongly Agree",
         b:  "Agree",
         c:  "Neutral",
@@ -29,7 +29,7 @@
         answer: "QA",
     },
     {
-        question:  "You offer creative new perspectives on a project",
+        question:  "You offer creative new perspectives on a project.",
         a:  "Strongly Agree",
         b:  "Agree",
         c:  "Neutral",
@@ -38,7 +38,7 @@
         answer: "QA",
     },
     {
-        question:  "You are detailed orineted",
+        question:  "You are detailed orineted.",
         a:  "Strongly Agree",
         b:  "Agree",
         c:  "Neutral",
@@ -56,7 +56,7 @@
         answer: "ProductOwner",
     },
     {
-        question:  "Your friends and family would consider you an extrovert",
+        question:  "Your friends and family would consider you an extrovert.",
         a:  "Strongly Agree",
         b:  "Agree",
         c:  "Neutral",
@@ -83,7 +83,7 @@
         answer: "ScrumMaster",
     },
     {
-        question:  "You like to look at the big picture",
+        question:  "You like to look at the big picture.",
         a:  "Strongly Agree",
         b:  "Agree",
         c:  "Neutral",
@@ -92,7 +92,7 @@
         answer: "ScrumMaster",
     },
     {
-        question:  "You are well organized",
+        question:  "You are well organized.",
         a:  "Strongly Agree",
         b:  "Agree",
         c:  "Neutral",
@@ -101,7 +101,7 @@
         answer: "ScrumMaster",
     },
     {
-        question:  "You often mentor and teach others new skills",
+        question:  "You often mentor and teach others new skills.",
         a:  "Strongly Agree",
         b:  "Agree",
         c:  "Neutral",
@@ -110,7 +110,7 @@
         answer: "TechLead",
     },
     {
-        question:  "People often come to you if they are having difficulty with their part of the project",
+        question:  "People often come to you if they are having difficulty with their part of the project.",
         a:  "Strongly Agree",
         b:  "Agree",
         c:  "Neutral",
@@ -119,7 +119,7 @@
         answer: "TechLead",
     },
     {
-        question:  "You divide up tasks amoung your team",
+        question:  "You divide up tasks amoung your team.",
         a:  "Strongly Agree",
         b:  "Agree",
         c:  "Neutral",
@@ -128,7 +128,7 @@
         answer: "TechLead",
     },
     {
-        question:  "People often confide in you when they need help",
+        question:  "People often confide in you when they need help.",
         a:  "Strongly Agree",
         b:  "Agree",
         c:  "Neutral",
@@ -137,7 +137,7 @@
         answer: "TechLead",
     },
     {
-        question:  "You are often the most hands-on person in a project",
+        question:  "You are often the most hands-on person in a project.",
         a:  "Strongly Agree",
         b:  "Agree",
         c:  "Neutral",
@@ -146,7 +146,7 @@
         answer: "TechChaser",
     },
     {
-        question:  "You enjoy being creative and taking on challenges",
+        question:  "You enjoy being creative and taking on challenges.",
         a:  "Strongly Agree",
         b:  "Agree",
         c:  "Neutral",
@@ -155,7 +155,7 @@
         answer: "TechChaser",
     },
     {
-        question:  "You are often the first to find a solution while working on a project",
+        question:  "You are often the first to find a solution while working on a project.",
         a:  "Strongly Agree",
         b:  "Agree",
         c:  "Neutral",
@@ -167,6 +167,7 @@
 
 
 ];
+// Stores each individual key. Prevents redundant code.
 const quiz= document.getElementById('quiz')
 const answers= document.querySelectorAll('.answer')
 const questions = document.getElementById('question')
@@ -210,7 +211,7 @@ function getSelected(){
     
     return answer
 }
-
+// Looks for events and adds the total up for each role. 
 submitBtn.addEventListener('click', () =>{
     
     var roles = new Array("Product Owner", "Scrum Master", "QA", "Tech Lead", "Tech Chaser")
@@ -247,6 +248,7 @@ submitBtn.addEventListener('click', () =>{
                 highestIndex = i;
              }
         }
+      // Point check. Checks to see if the point system is working.
         console.log(points[0])
         console.log(points[1])
         console.log(points[2])
