@@ -1,9 +1,0 @@
-{
-  "name": "interactive-quiz",
-  "version": "0.0.0",
-  "description": "Interactive-Quiz",
-  "main": "server.js",
-  "author": {
-    "name": ""
-  }
-}
