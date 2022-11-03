@@ -156,6 +156,7 @@ submitBtn.addEventListener('click', () =>{ // Looks for user submitting answer.
                 quiz.innerHTML+= ", " + roles[i] 
             }
         }
+        quiz.innerHTML+="<br><br><br>Email: scrumassignerfeedback@gmail.com if you wish to leave us<br>some feedback about our website!"
     }
 }
 })
