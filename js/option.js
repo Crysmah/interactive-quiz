@@ -94,6 +94,7 @@ const d_text = document.getElementById('d_text')
 const e_text = document.getElementById('e_text')
 const submitBtn = document.getElementById('submit')
 
+
 let currentQuizQuestion = 0
 var points = Array(0, 0, 0, 0, 0);
 let highestIndex = 0;
@@ -156,7 +157,30 @@ submitBtn.addEventListener('click', () =>{ // Looks for user submitting answer.
                 quiz.innerHTML+= ", " + roles[i] 
             }
         }
-        quiz.innerHTML+="<br><br><br>Email: scrumassignerfeedback@gmail.com if you wish to leave us<br>some feedback about our website!"
+       
+     quiz.innerHTML+="<br><br><br>Email: scrumassignerfeedback@gmail.com if you wish to leave us<br>some feedback about our website!"
+    
+    //added share links
+    function shaButtonFunction()
+    {
+        document.getElementById("shareButon").innerHTML= '<button onclick="shareFunction()">Share this Quiz!</button>' 
     }
+    function showTBfunction()
+    {
+    document.getElementById("textBox").innerHTML = '<input type = "text" value = "https://scrum-group-5.github.io/interactive-quiz/index.html" id="myquiz">'
+    }   
+
+    function shareFunction()
+    { var copyText = document.getElementByID("myquiz")
+
+    copyText.select();
+    copyText.setSelectionRange(0,99999)
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied Quiz!" + copyText.value)
+
+    }
+}
 }
 })
