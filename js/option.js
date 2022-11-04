@@ -181,6 +181,22 @@ submitBtn.addEventListener('click', () =>{ // Looks for user submitting answer.
         }
        
      quiz.innerHTML+="<br><br><br>Email: scrumassignerfeedback@gmail.com if you wish to leave us<br>some feedback about our website!"
+     let btn = document.createElement("button");
+btn.innerHTML = "Share";
+btn.onclick = function () {
+    var range = document.createRange();
+    range.selectNode(document.getElementById('quiz'));
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    try {
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        alert("successfully copied text");
+    } catch(err) {
+        alert("unable to copy");
+    }
+};
+document.body.appendChild(btn);
 shaButtonFunction()
 showTBfunction()
     
