@@ -123,6 +123,28 @@ function getSelected(){ // Searches and returns selected answer.
     })
     return answer
 }
+//added share links
+    
+    function shaButtonFunction()
+    {
+        document.getElementById("shareButton").innerHTML= "<button onclick=\"shareFunction()\">Share this Quiz!</button>" 
+    }
+    function showTBfunction()
+    {
+    document.getElementById("textBox").innerHTML = "<input type = \"text\" value = \"https://scrum-group-5.github.io/interactive-quiz/index.html\" id=\"scrumquiz\">"
+    }   
+
+    function shareFunction()
+    { var copyText = document.getElementByID("scrumquiz")
+
+    copyText.select();
+    copyText.setSelectionRange(0,99999)
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied Quiz!" + copyText.value)
+
+    }
 
 submitBtn.addEventListener('click', () =>{ // Looks for user submitting answer. 
     
@@ -159,28 +181,9 @@ submitBtn.addEventListener('click', () =>{ // Looks for user submitting answer.
         }
        
      quiz.innerHTML+="<br><br><br>Email: scrumassignerfeedback@gmail.com if you wish to leave us<br>some feedback about our website!"
+shaButtonFunction()
+showTBfunction()
     
-    //added share links
-    function shaButtonFunction()
-    {
-        document.getElementById("shareButton").innerHTML= '<button onclick="shareFunction()">Share this Quiz!</button>' 
-    }
-    function showTBfunction()
-    {
-    document.getElementById("textBox").innerHTML = '<input type = "text" value = "https://scrum-group-5.github.io/interactive-quiz/index.html" id="myquiz">'
-    }   
-
-    function shareFunction()
-    { var copyText = document.getElementByID("myquiz")
-
-    copyText.select();
-    copyText.setSelectionRange(0,99999)
-
-    navigator.clipboard.writeText(copyText.value);
-
-    alert("Copied Quiz!" + copyText.value)
-
-    }
 }
 }
 })
