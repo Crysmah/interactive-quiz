@@ -163,7 +163,7 @@ submitBtn.addEventListener('click', () =>{ // Looks for user submitting answer.
     //added share links
     function shaButtonFunction()
     {
-        document.getElementById("shareButon").innerHTML= '<button onclick="shareFunction()">Share this Quiz!</button>' 
+        document.getElementById("shareButton").innerHTML= '<button onclick="shareFunction()">Share this Quiz!</button>' 
     }
     function showTBfunction()
     {
