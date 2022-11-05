@@ -180,6 +180,7 @@ btn.onclick = function () {
     var range = document.getElementById('quiz');
     var node = range.childNodes[0];
     var text = range.childNodes[0].length;
+    textRange.setStart(node,0)
     textRange.setEnd(node,text);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(textRange);
