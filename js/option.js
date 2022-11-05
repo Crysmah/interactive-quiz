@@ -123,28 +123,7 @@ function getSelected(){ // Searches and returns selected answer.
     })
     return answer
 }
-//added share links
-    
-    function shaButtonFunction()
-    {
-        document.getElementById("shareButton").innerHTML= "<button onclick=\"shareFunction()\">Share this Quiz!</button>" 
-    }
-    function showTBfunction()
-    {
-    document.getElementById("textBox").innerHTML = "<input type = \"text\" value = \"https://scrum-group-5.github.io/interactive-quiz/index.html\" id=\"scrumquiz\">"
-    }   
 
-    function shareFunction()
-    { var copyText = document.getElementByID("scrumquiz")
-
-    copyText.select();
-    copyText.setSelectionRange(0,99999)
-
-    navigator.clipboard.writeText(copyText.value);
-
-    alert("Copied Quiz!" + copyText.value)
-
-    }
 
 submitBtn.addEventListener('click', () =>{ // Looks for user submitting answer. 
     
@@ -179,8 +158,21 @@ submitBtn.addEventListener('click', () =>{ // Looks for user submitting answer.
                 quiz.innerHTML+= ", " + roles[i] 
             }
         }
+        quiz.innerHTML += "<br/><br/>Summary of Role(s):"
        
-     quiz.innerHTML+="<br><br><br>Email: scrumassignerfeedback@gmail.com if you wish to leave us<br>some feedback about our website!"
+         //product owner
+        quiz.innerHTML += "<br/>Product Owner<br/> You are the keeper of the Vision! You are the authority and know what shots to take!"
+        //Scrummaster
+         quiz.innerHTML += "<br/><br/>Scrum Master<br/>You are the Hall Monitor! You help the project stay on track and help call the shots!"
+        //Tech Lead
+         quiz.innerHTML += "<br/><br/>TechLead<br/>You are the Tech Master! Your tech knowledge is incredibly valuable to not only the project but also to others who need mentoring!"
+        //Tech chase
+         quiz.innerHTML += "<br/><br/>Tech Chaser<br/>You are the Inventor! You are creative and always looking for knwoledge!"
+        //QA
+         quiz.innerHTML += "<br/><br/>Quality Assurance<br/>You are the keeper of the Doomsayer! You have a keen eye for details and help spot bugs within a project!"
+         quiz.innerHTML += "<br/><br/> click our about page to learn more about your role(s)!</font>"
+
+     quiz.innerHTML+="<br><br>Email: scrumassignerfeedback@gmail.com if you wish to leave us<br>some feedback about our website!"
      let btn = document.createElement("button");
 btn.innerHTML = "Share";
 btn.onclick = function () {
@@ -197,8 +189,7 @@ btn.onclick = function () {
     }
 };
 document.body.appendChild(btn);
-shaButtonFunction()
-showTBfunction()
+
     
 }
 }
