@@ -167,10 +167,10 @@ submitBtn.addEventListener('click', () =>{ // Looks for user submitting answer.
         //Tech Lead
          quiz.innerHTML += "<br/><br/>TechLead<br/>You are the Tech Master! Your tech knowledge is incredibly valuable to not only the project but also to others who need mentoring!"
         //Tech chase
-         quiz.innerHTML += "<br/><br/>Tech Chaser<br/>You are the Inventor! You are creative and always looking for knwoledge!"
+         quiz.innerHTML += "<br/><br/>Tech Chaser<br/>You are the Inventor! You are creative and always looking for knowledge!"
         //QA
-         quiz.innerHTML += "<br/><br/>Quality Assurance<br/>You are the keeper of the Doomsayer! You have a keen eye for details and help spot bugs within a project!"
-         quiz.innerHTML += "<br/><br/> click our about page to learn more about your role(s)!</font>"
+         quiz.innerHTML += "<br/><br/>Quality Assurance<br/>You are the Doomsayer! You have a keen eye for details and help spot bugs within a project!"
+         quiz.innerHTML += "<br/><br/> Click our about page to learn more about your role(s)!</font>"
 
      quiz.innerHTML+="<br><br>Email: scrumassignerfeedback@gmail.com if you wish to leave us<br>some feedback about our website!"
      let btn = document.createElement("button");
