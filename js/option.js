@@ -176,14 +176,17 @@ submitBtn.addEventListener('click', () =>{ // Looks for user submitting answer.
      let btn = document.createElement("button");
 btn.innerHTML = "Share";
 btn.onclick = function () {
-    var range = document.createRange();
-    range.selectNode(document.getElementById('quiz'));
+    const textRange = document.createRange();
+    var range = document.getElementById('quiz');
+    var node = range.childNodes[0];
+    var text = range.childNodes[0].length;
+    textRange.setEnd(node,text);
     window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
+    window.getSelection().addRange(textRange);
     try {
         document.execCommand('copy');
         window.getSelection().removeAllRanges();
-        alert("successfully copied text");
+        alert("successfully copied results");
     } catch(err) {
         alert("unable to copy");
     }
