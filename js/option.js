@@ -348,10 +348,10 @@ btn.style.marginTop = "-110px";
 btn.onclick = function () {
     const textRange = document.createRange();
     var range = document.getElementById('quiz');
-    var node = range.childNodes[0];
-    var text = range.childNodes[0].length;
-    textRange.setStart(node,0)
-    textRange.setEnd(node,text);
+    var node = range.childNodes[0]; // Getting the properties of the div tag
+    var text = range.childNodes[0].length; // Creating range for only the first line of text within the div tag
+    textRange.setStart(node,0) // setStart Range for beginning of the text line
+    textRange.setEnd(node,text); // setEnd Range is set to the lenght of the first line so that it doesn't copy lines after it
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(textRange);
     try {
