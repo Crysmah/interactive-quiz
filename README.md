@@ -7,5 +7,3 @@ Github's Free Hosting.
 
 The website has the user answer questions. It then analyzes their answers to produce their scrum role they are best suited to perform.
 
-Website
-https://scrum-group-5.github.io./
