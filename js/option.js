@@ -340,7 +340,7 @@ submitBtn.addEventListener('click', () =>{ // Looks for user submitting answer.
      let btn = document.createElement("button");
 btn.innerHTML = "Copy result";
 //move to center
-btn.style.marginLeft = "460px";
+btn.style.marginLeft = "560px";
 btn.style.marginTop = "-110px";
 
 
