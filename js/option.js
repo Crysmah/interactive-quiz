@@ -98,7 +98,7 @@ const quizQA = [
     },
     {  //24 new
         question: "You like trying new things \n(Question 24/"+qNum+")",
-        answer: "ProductOwner",
+        answer: "TechChaser",
     },
 
     {  //25 tiebreaker
