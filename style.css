@@ -4,10 +4,18 @@ body{
     font-family: 'Rampart One', cursive;
     margin: 0;
 }
+
 h2{
     font-size: 1.4rem;
     text-align: center;
 }
+
+h3{
+    
+    font-size: 1.2rem;
+    text-align:center;
+}
+
 .quiz-container{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 

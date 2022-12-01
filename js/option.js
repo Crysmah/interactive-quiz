@@ -1,83 +1,108 @@
 //question number; increase if more questions are added
-const qNum ='19';
+const qNum ='25';
 
 // Stores all questions and answers in quizQA (Questions & Answers).
 const quizQA = [
-    {
+    { //1
         question: "You have an eye for spotting errors in a project that others have missed. \n(Question 1/"+qNum+")",
         answer: "QA",
     },
-    {
+    {  //2
         question: "People often come to you to confirm details about what the project should be. \n(Question 2/"+qNum+")",
         answer: "ProductOwner",
         
     },
-    {
+    {  //3
         question: "You are not afraid to voice your opinion and concerns. \n(Question 3/"+qNum+")",
         answer: "QA",
     },
-    {
+    {   //4
         question: "You offer creative new perspectives on a project. \n(Question 4/"+qNum+")",
         answer: "QA",
     },
-    {
+    {  //5
         question:  "You are detailed oriented. \n(Question 5/"+qNum+")",
         answer: "QA",
     },
-    {
+    {  //6 possibly remove because of redundancy
         question: "People often come to you to confirm that they are working on the correct part of the project. \n(Question 6/"+qNum+")",
         answer: "ProductOwner",
     },
-    {
+    {  //7
         question: "Your friends and family would consider you an extrovert. \n(Question 7/"+qNum+")",
         answer: "ProductOwner",
     },
-    {
+    {  //8
         question: "You often reach out to absent members in a group to let them know that their absence is noticed. \n(Question 8/"+qNum+")",
         answer: "ScrumMaster",
     },
-    {
+    {  //9
         question: "People often rely on you to ensure that the progress of the group is going smoothly. \n(Question 9/"+qNum+")",
         answer: "ScrumMaster",
     },
-    {
+    {   //10
         question: "You like to look at the big picture. \n(Question 10/"+qNum+")",
         answer: "ScrumMaster",
     },
-    {
+    {  //11
         question: "You are well organized. \n(Question 11/"+qNum+")",
         answer: "ScrumMaster",
     },
-    {
+    {  //12
         question: "You often mentor and teach others new skills. \n(Question 12/"+qNum+")",
         answer: "TechLead",
     },
-    {
+    {  //13
         question: "People often come to you if they are having difficulty with their part of the project. \n(Question 13/"+qNum+")",
         answer: "TechLead",
     },
-    {
-        question: "You divide up tasks amoung your team. \n(Question 14/"+qNum+")",
+    {  //14
+        question: "You know how to evenly distribute work fairly among the group. \n(Question 14/"+qNum+")",
         answer: "TechLead",
     },
-    {
+    {  //15
         question: "People often confide in you when they need help. \n(Question 15/"+qNum+")",
         answer: "TechLead",
     },
-    {
+    {  //16
         question: "You are often the most hands-on person in a project. \n(Question 16/"+qNum+")",
         answer: "TechChaser",
     },
-    {
+    {  //17
         question: "You enjoy being creative and taking on challenges. \n(Question 17/"+qNum+")",
         answer: "TechChaser",
     },
-    {
+    {  //18
         question: "You are often the first to find a solution while working on a project. \n(Question 18/"+qNum+")",
         answer: "TechChaser",
     },
-    {
-        question: "Which of these title(s) do you resonate with the most? \n(Question 19/"+qNum+")",
+    {  //19 new
+        question: "You like to ask the question 'what..if?'. \n(Question 19/"+qNum+")",
+        answer: "ProductOwner",
+    },
+    {  //20 new 
+        question: "You consider yourself to be very organized. \n(Question 20/"+qNum+")",
+        answer: "ProductOwner",
+    },
+    {  //21 new
+        question: "You have somewhat of a business mind and know how to sell. \n(Question 21/"+qNum+")",
+        answer: "ProductOwner",
+    },
+    {  //22 new
+        question: "If there is a disagreement amongst the group, you are often the one to delegate. \n(Question 22/"+qNum+")",
+        answer: "ScrumMaster",
+    },
+    {  //23 new
+        question: "You like collaborating with others to find a solution. \n(Question 23/"+qNum+")",
+        answer: "TechChaser",
+    },
+    {  //24 new
+        question: "You like trying new things \n(Question 24/"+qNum+")",
+        answer: "ProductOwner",
+    },
+
+    {  //25 tiebreaker
+        question: "Which of these title(s) do you resonate with the most? \n(Question 25/"+qNum+")",
         answer: "tiebreaker",
     },
 ];
