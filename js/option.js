@@ -26,79 +26,84 @@ const quizQA = [
     },
    
     {  //6
-        question: "Your friends and family would consider you an extrovert. \n(Question 7/"+qNum+")",
+        question: "Your friends and family would consider you an extrovert. \n(Question 6/"+qNum+")",
         answer: "ProductOwner",
     },
     {  //7
-        question: "You often reach out to absent members in a group to let them know that their absence is noticed. \n(Question 8/"+qNum+")",
+        question: "You often reach out to absent members in a group to let them know that their absence is noticed. \n(Question 7/"+qNum+")",
         answer: "ScrumMaster",
     },
     {  //8
-        question: "People often rely on you to ensure that the progress of the group is going smoothly. \n(Question 9/"+qNum+")",
+        question: "People often rely on you to ensure that the progress of the group is going smoothly. \n(Question 8/"+qNum+")",
         answer: "ScrumMaster",
     },
     {   //9
-        question: "You like to look at the big picture. \n(Question 10/"+qNum+")",
+        question: "You like to look at the big picture. \n(Question 9/"+qNum+")",
         answer: "ScrumMaster",
     },
     {  //10
-        question: "You are well organized. \n(Question 11/"+qNum+")",
+        question: "You are well organized. \n(Question 10/"+qNum+")",
         answer: "ScrumMaster",
     },
     {  //11
-        question: "You often mentor and teach others new skills. \n(Question 12/"+qNum+")",
+        question: "You often mentor and teach others new skills. \n(Question 11/"+qNum+")",
         answer: "TechLead",
     },
     {  //12
-        question: "People often come to you if they are having difficulty with their part of the project. \n(Question 13/"+qNum+")",
+        question: "People often come to you if they are having difficulty with their part of the project. \n(Question 12/"+qNum+")",
         answer: "TechLead",
     },
     {  //13
-        question: "You know how to evenly distribute work fairly among the group. \n(Question 14/"+qNum+")",
+        question: "You know how to evenly distribute work fairly among the group. \n(Question 13/"+qNum+")",
         answer: "TechLead",
     },
     {  //14
-        question: "People often confide in you when they need help. \n(Question 15/"+qNum+")",
+        question: "People often confide in you when they need help. \n(Question 14/"+qNum+")",
         answer: "TechLead",
     },
     {  //15
-        question: "You are often the most hands-on person in a project. \n(Question 16/"+qNum+")",
+        question: "You are often the most hands-on person in a project. \n(Question 15/"+qNum+")",
         answer: "TechChaser",
     },
     {  //16
-        question: "You enjoy being creative and taking on challenges. \n(Question 17/"+qNum+")",
+        question: "You enjoy being creative and taking on challenges. \n(Question 16/"+qNum+")",
         answer: "TechChaser",
     },
     {  //17
-        question: "You are often the first to find a solution while working on a project. \n(Question 18/"+qNum+")",
+        question: "You are often the first to find a solution while working on a project. \n(Question 17/"+qNum+")",
         answer: "TechChaser",
     },
     {  //18 new
-        question: "You like to ask the question 'what..if?'. \n(Question 19/"+qNum+")",
+        question: "You like to ask the question 'what..if?'. \n(Question 18/"+qNum+")",
         answer: "ProductOwner",
     },
     {  //19 new 
-        question: "You consider yourself to be very organized. \n(Question 20/"+qNum+")",
+        question: "You consider yourself to be very organized. \n(Question 19/"+qNum+")",
         answer: "ProductOwner",
     },
     {  //20 new
-        question: "You have somewhat of a business mind and know how to sell. \n(Question 21/"+qNum+")",
+        question: "You have somewhat of a business mind and know how to sell. \n(Question 20/"+qNum+")",
         answer: "ProductOwner",
     },
     {  //21 new
-        question: "If there is a disagreement amongst the group, you are often the one to delegate. \n(Question 22/"+qNum+")",
+        question: "If there is a disagreement amongst the group, you are often the one to delegate. \n(Question 21/"+qNum+")",
         answer: "ScrumMaster",
     },
     {  //22 new
-        question: "You like collaborating with others to find a solution. \n(Question 23/"+qNum+")",
+        question: "You like collaborating with others to find a solution. \n(Question 22/"+qNum+")",
         answer: "TechChaser",
     },
     {  //23 new
-        question: "You like trying new things \n(Question 24/"+qNum+")",
+        question: "You like trying new things \n(Question 23/"+qNum+")",
         answer: "TechChaser",
     },
+    {  //24 new
+        question:  "Are you good with highlighting people's mistakes? \n(Question 24/"+qNum+")",
+        answer: "QA",
+    },
+   
 
-    {  //24 tiebreaker
+    {  //25 tiebreaker
         question: "Which of these title(s) do you resonate with the most? \n(Question 25/"+qNum+")",
         answer: "tiebreaker",
     },
