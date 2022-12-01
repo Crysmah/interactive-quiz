@@ -1,5 +1,5 @@
 //question number; increase if more questions are added
-const qNum ='24';
+const qNum ='25';
 
 // Stores all questions and answers in quizQA (Questions & Answers).
 const quizQA = [
@@ -94,21 +94,22 @@ const quizQA = [
         answer: "TechChaser",
     },
     {  //23 new
-        question: "You like trying new things \n(Question 23/"+qNum+")",
+        question: "You like trying new things. \n(Question 23/"+qNum+")",
         answer: "TechChaser",
     },
     {  //24 new
         question:  "Are you good with highlighting people's mistakes? \n(Question 24/"+qNum+")",
         answer: "QA",
     },
-   
-
-    {  //25 tiebreaker
-        question: "Which of these title(s) do you resonate with the most? \n(Question 25/"+qNum+")",
+    { // 25 new
+        question:  "Are you willing to make the technical decisions for the team? \n(Question 25/"+qNum+")",
+        answer: "TechLead",
+    },
+    {  // Tiebreaker
+        question: "Which of these title(s) do you resonate with the most? \n(Tiebreaker)",
         answer: "tiebreaker",
     },
 ];
-
 // Stores the choices separate. Helps to reduce redundant code
 const quizChoices =
 {
@@ -136,10 +137,10 @@ const d_text = document.getElementById('d_text')
 const e_text = document.getElementById('e_text')
 const submitBtn = document.getElementById('submit')
 
-
 let currentQuizQuestion = 0
-var points = Array(0, 0, 0, 0, 0);
-let highestIndex = 0;
+var points = Array(0, 0, 0, 0, 0)
+let highestIndex = 0
+let tieBreakerCheck = false
 
 loadQuiz() // Driver, Loads the first question
 function loadQuiz(){
@@ -155,6 +156,7 @@ function loadQuiz(){
     d_text.innerText = currentQuizData.d
     e_text.innerText = currentQuizData.e
 }
+
 function loadTieBreaker(){
     deselectAnwsers() // Deselects answer for next question. Prevents accidently clicking the submit button twice.
     const currentQuestion = quizQA[currentQuizQuestion]
@@ -162,9 +164,7 @@ function loadTieBreaker(){
     questions.innerText = currentQuestion.question
 
     var tieQuestions = Array(0, 0, 0, 0, 0);
-
-
-    for(i = 1; i < 5; i++) {// Single Highest Role
+    for(i = 0; i < 5; i++) {// Single Highest Role
         if(points[i] > points[highestIndex]){ // Compares roles to see which is the highest. 
             highestIndex = i;
          }
@@ -250,7 +250,6 @@ submitBtn.addEventListener('click', () =>{ // Looks for user submitting answer.
             points[3] += parseInt(answer)
         else if(quizQA[currentQuizQuestion].answer === "TechChaser")
             points[4] += parseInt(answer)
-            
         else if(quizQA[currentQuizQuestion].answer === "tiebreaker")
         {
             //break tie
@@ -283,23 +282,30 @@ submitBtn.addEventListener('click', () =>{ // Looks for user submitting answer.
     if(currentQuizQuestion < quizQA.length-1){
         loadQuiz()
     } 
-    else if(currentQuizQuestion === quizQA.length-1){
-        loadTieBreaker()
+    else {
+        if(!tieBreakerCheck){
+            tieBreakerCheck = true;
+            for(i = 1; i < 5; i++) {// Single Highest Role
+                if(points[i] > points[highestIndex]){ // Compares roles to see which is the highest. 
+                    highestIndex = i;
+                 }
+            }
+            for(i=0; i < 5; i++){ // Deals with multiple roles being the same value; appended: this shouldn't be a problem anymore with the tiebreaker 
+                if(points[i] == points[highestIndex] && highestIndex !=i){
+                    loadTieBreaker()
+                    tieBreakerCheck = false;
+                    break;
+                }
+            }
+        }
     }
-    else{
+    if(tieBreakerCheck){
         for(i = 1; i < 5; i++) {// Single Highest Role
             if(points[i] > points[highestIndex]){ // Compares roles to see which is the highest. 
                 highestIndex = i;
              }
         }
         quiz.innerHTML= "Result: Your best suited role is " + roles[highestIndex] 
-        for(i=0; i < 5; i++){ // Deals with multiple roles being the same value; appended: this shouldn't be a problem anymore with the tiebreaker 
-            if(points[i] == points[highestIndex] && highestIndex !=i){
-
-                quiz.innerHTML+= ", " + roles[i] 
-            }
-        }
-        
         var finalRole=roles[highestIndex] 
 
         if (finalRole==="Product Owner") 
@@ -346,53 +352,31 @@ submitBtn.addEventListener('click', () =>{ // Looks for user submitting answer.
             quiz.innerHTML += "<br/>You are the Inventor! You are creative and always looking for knowledge!"
         }
 
-        /*
-        quiz.innerHTML += "<br/><br/>Summary of Role(s):"
-       
-        
-         //product owner
-        quiz.innerHTML += "<br/>Product Owner<br/> You are the keeper of the Vision! You are the authority and know what shots to take!"
-        //Scrummaster
-         quiz.innerHTML += "<br/><br/>Scrum Master<br/>You are the Hall Monitor! You help the project stay on track and help call the shots!"
-        //Tech Lead
-         quiz.innerHTML += "<br/><br/>TechLead<br/>You are the Tech Master! Your tech knowledge is incredibly valuable to not only the project but also to others who need mentoring!"
-        //Tech chase
-         quiz.innerHTML += "<br/><br/>Tech Chaser<br/>You are the Inventor! You are creative and always looking for knowledge!"
-        //QA
-         quiz.innerHTML += "<br/><br/>Quality Assurance<br/>You are the Doomsayer! You have a keen eye for details and help spot bugs within a project!"
-         quiz.innerHTML += "<br/><br/> Click our about page to learn more about your role(s)!</font>"
+        quiz.innerHTML+="<br><br>Feedback Email: scrumassignerfeedback@gmail.com "
+        let btn = document.createElement("button");
+        btn.innerHTML = "Copy result";
+        //move to center
+        btn.className="share";
+        btn.style.marginTop = "-110px";
 
-         */
-     quiz.innerHTML+="<br><br>Feedback Email: scrumassignerfeedback@gmail.com "
-     let btn = document.createElement("button");
-btn.innerHTML = "Copy result";
-//move to center
-btn.style.marginLeft = "560px";
-btn.style.marginTop = "-110px";
-
-
-
-btn.onclick = function () {
-    const textRange = document.createRange();
-    var range = document.getElementById('quiz');
-    var node = range.childNodes[0]; // Getting the properties of the div tag
-    var text = range.childNodes[0].length; // Creating range for only the first line of text within the div tag
-    textRange.setStart(node,0) // setStart Range for beginning of the text line
-    textRange.setEnd(node,text); // setEnd Range is set to the lenght of the first line so that it doesn't copy lines after it
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(textRange);
-    try {
-        document.execCommand('copy');
-        window.getSelection().removeAllRanges();
-        alert("successfully copied results");
-    } catch(err) {
-        alert("unable to copy");
-    }
-};
-document.body.appendChild(btn);
-
-quiz.style.height = "700px";
+        btn.onclick = function () {
+            const textRange = document.createRange();
+            var range = document.getElementById('quiz');
+            var node = range.childNodes[0]; // Getting the properties of the div tag
+            var text = range.childNodes[0].length; // Creating range for only the first line of text within the div tag
+            textRange.setStart(node,0) // setStart Range for beginning of the text line
+            textRange.setEnd(node,text); // setEnd Range is set to the lenght of the first line so that it doesn't copy lines after it
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(textRange);
+            try {
+                document.execCommand('copy');
+                window.getSelection().removeAllRanges();
+                alert("Successfully copied results!");
+            } catch(err) {
+                alert("Unable to copy results.");
+            }
+        };
+        document.body.appendChild(btn);
+        quiz.style.height = "700px";
     
-}
-}
-})
+    }}})

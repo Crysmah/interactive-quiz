@@ -96,3 +96,7 @@ button:hover{
     padding: 1mm;
 }
 
+.share {
+    margin: 0 auto;
+    text-align:center;
+}
